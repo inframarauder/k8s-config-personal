@@ -1,7 +1,8 @@
 #!/bin/bash
 
 CLUSTER_NAME="inframarauder-demo-cluster"
-CLUSTER_VERSION="1.33"
+CLUSTER_VERSION="1.32"
+REGION="ap-south-1"
 NODEGROUP_NAME="inframarauder-demo-nodegroup"
 NODE_TYPE="t3.micro"
 NODES=3
@@ -12,6 +13,7 @@ NODES_MAX=5
 eksctl create cluster \
  --name=$CLUSTER_NAME \
  --version=$CLUSTER_VERSION \
+ --region=$REGION \
  --nodegroup-name=$NODEGROUP_NAME \
  --node-type=$NODE_TYPE \
  --nodes=$NODES \
