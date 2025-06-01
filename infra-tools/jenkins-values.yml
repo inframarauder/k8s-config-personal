@@ -9,14 +9,14 @@ controller:
   admin:
     createSecret: true
   # setup ingress with SSL cert from ACM
-  ingress:
-    enabled: true
-    hosts:
-      - host: jenkins.inframarauder.dev
-        paths:
-          - /
-    annotations:
-      kubernetes.io/ingress.class: alb
-      alb.ingress.kubernetes.io/scheme: internet-facing
-      alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:302087542857:certificate/5ebaae12-61d2-4aae-b807-6b698f4fa7fd
-      alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+  # ingress:
+  #   enabled: true
+  #   hosts:
+  #     - host: jenkins.inframarauder.dev
+  #       paths:
+  #         - /
+  #   annotations:
+  #     kubernetes.io/ingress.class: alb
+  #     alb.ingress.kubernetes.io/scheme: internet-facing
+  #     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-south-1:302087542857:certificate/5ebaae12-61d2-4aae-b807-6b698f4fa7fd
+  #     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
